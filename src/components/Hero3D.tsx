@@ -6,18 +6,18 @@ import luxuryCarHero from "@/assets/luxury-car-hero.jpg";
 export const Hero3D = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const carModels = [
-    { name: "LANCER", year: "2024", price: "$89,999" },
-    { name: "PHANTOM", year: "2024", price: "$125,999" },
-    { name: "ELITE", year: "2024", price: "$199,999" }
+  const modPackages = [
+    { name: "TURBO", type: "PERFORMANCE", price: "FROM $5,999" },
+    { name: "CARBON", type: "AESTHETIC", price: "FROM $3,499" },
+    { name: "TRACK", type: "RACING", price: "FROM $12,999" }
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carModels.length);
+    setCurrentSlide((prev) => (prev + 1) % modPackages.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carModels.length) % carModels.length);
+    setCurrentSlide((prev) => (prev - 1 + modPackages.length) % modPackages.length);
   };
 
   return (
@@ -32,27 +32,27 @@ export const Hero3D = () => {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-8xl lg:text-9xl font-black text-foreground leading-none tracking-tight">
-              {carModels[currentSlide].name}
+              {modPackages[currentSlide].name}
             </h1>
             <div className="flex items-center space-x-4 text-luxury-red text-xl">
-              <span>{carModels[currentSlide].year}</span>
+              <span>{modPackages[currentSlide].type}</span>
               <span>•</span>
-              <span>{carModels[currentSlide].price}</span>
+              <span>{modPackages[currentSlide].price}</span>
             </div>
           </div>
           
           <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
-            Experience the pinnacle of automotive excellence with our premium collection 
-            of luxury vehicles designed for those who demand perfection.
+            Transform your vehicle with our professional modification services. 
+            From performance upgrades to aesthetic enhancements, we create automotive masterpieces.
           </p>
           
           <div className="flex items-center space-x-4">
             <Button variant="luxury" size="xl" className="group">
               <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Watch Video
+              View Projects
             </Button>
             <Button variant="glass" size="xl">
-              Explore Models
+              Get Quote
             </Button>
           </div>
         </div>
@@ -89,7 +89,7 @@ export const Hero3D = () => {
         </Button>
         
         <div className="flex space-x-2">
-          {carModels.map((_, index) => (
+          {modPackages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
@@ -114,7 +114,7 @@ export const Hero3D = () => {
 
       {/* Floating Website URL */}
       <div className="absolute bottom-8 right-8 text-muted-foreground text-sm">
-        www.luxurycars.com
+        www.carmods.com
       </div>
     </section>
   );
