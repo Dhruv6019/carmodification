@@ -61,12 +61,10 @@ export const Hero3D = () => {
         <div className="relative">
           <div className="relative group">
             {/* 3D Car Container */}
-            <div className="relative transform-gpu transition-all duration-700 hover:scale-105 hover:rotate-1">
-              <img 
-                src={luxuryCarHero}
-                alt="Luxury Car"
-                className="w-full h-auto object-contain drop-shadow-2xl filter brightness-110 contrast-110"
-              />
+            <div 
+              className="relative w-full h-96 lg:h-[500px] transform-gpu transition-all duration-700 hover:scale-105 hover:rotate-1 bg-cover bg-center bg-no-repeat drop-shadow-2xl filter brightness-110 contrast-110"
+              style={{ backgroundImage: `url(${luxuryCarHero})` }}
+            >
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-radial from-luxury-red/30 via-transparent to-transparent opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
             </div>
