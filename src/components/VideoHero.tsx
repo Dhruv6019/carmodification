@@ -1,23 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, Menu, User } from "lucide-react";
 import { useState } from "react";
-
 export const VideoHero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* YouTube Video Background */}
       <div className="absolute inset-0 w-full h-full">
-        <iframe
-          className="video-background"
-          src="https://www.youtube.com/embed/Vx9dh7SqxNA?autoplay=1&mute=1&loop=1&playlist=Vx9dh7SqxNA&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-          title="Car Background Video"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          onLoad={() => setIsVideoLoaded(true)}
-        />
+        <iframe className="video-background" src="https://www.youtube.com/embed/Vx9dh7SqxNA?autoplay=1&mute=1&loop=1&playlist=Vx9dh7SqxNA&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1" title="Car Background Video" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen onLoad={() => setIsVideoLoaded(true)} />
       </div>
       
       {/* Dark Gradient Overlay */}
@@ -74,18 +63,11 @@ export const VideoHero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-8">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-electric-blue to-electric-blue-dark hover:shadow-glow text-white font-semibold px-10 py-4 rounded-xl text-lg transition-all duration-300 hover:scale-105"
-            >
+            <Button size="lg" className="bg-gradient-to-r from-electric-blue to-electric-blue-dark hover:shadow-glow text-white font-semibold px-10 py-4 rounded-xl text-lg transition-all duration-300 hover:scale-105">
               Start Modifying
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-10 py-4 rounded-xl text-lg transition-all duration-300"
-            >
+            <Button variant="outline" size="lg" className="border-2 border-white hover:bg-white font-semibold px-10 py-4 rounded-xl text-lg transition-all duration-300 text-lime-900">
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
             </Button>
@@ -99,6 +81,5 @@ export const VideoHero = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
