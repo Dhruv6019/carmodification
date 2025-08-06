@@ -1,15 +1,17 @@
-import { Navigation } from "@/components/Navigation";
-import { Hero3D } from "@/components/Hero3D";
-import { ModelsShowcase } from "@/components/ModelsShowcase";
-import { ContactSection } from "@/components/ContactSection";
+import { VideoHero } from "@/components/VideoHero";
+import { FeatureCards } from "@/components/FeatureCards";
+import { LivePreviewTeaser } from "@/components/LivePreviewTeaser";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-luxury-black overflow-x-hidden">
-      <Navigation />
-      <Hero3D />
-      <ModelsShowcase />
-      <ContactSection />
+    <div className="min-h-screen overflow-x-hidden">
+      <VideoHero />
+      <FeatureCards />
+      <LivePreviewTeaser />
+      <TestimonialsCarousel />
+      <Footer />
     </div>
   );
 };
