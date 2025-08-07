@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Navigation } from "@/components/Navigation";
 import { Upload, ArrowRight, Car, Calendar, Settings } from "lucide-react";
 
 export const CarSelection = () => {
@@ -24,8 +25,9 @@ export const CarSelection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-background pt-20">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-background">
+      <Navigation />
+      <div className="max-w-6xl mx-auto px-6 pt-24 pb-16">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-display font-black text-foreground mb-6">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { Navigation } from "@/components/Navigation";
 import { 
   Palette, 
   Settings, 
@@ -61,8 +62,9 @@ export const ModificationHub = () => {
   };
 
   return (
-    <div className="min-h-screen bg-surface dark:bg-background pt-20">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-background">
+      <Navigation />
+      <div className="max-w-7xl mx-auto px-6 pt-24 pb-16">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-display font-black text-foreground mb-6">
