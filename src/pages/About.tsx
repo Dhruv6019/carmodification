@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Award, Wrench, Clock, Target, Star } from "lucide-react";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const About = () => {
   const stats = [
@@ -62,7 +63,7 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-muted to-background">
+      <AnimatedSection className="pt-24 pb-16 bg-gradient-to-b from-muted to-background mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -95,14 +96,14 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Stats Section */}
-      <section className="py-16 bg-card">
+      <AnimatedSection className="py-16 bg-card" animation="slideInLeft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center hover-scale animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <stat.icon className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-gradient mb-2">{stat.number}</div>
                 <p className="text-muted-foreground">{stat.label}</p>
@@ -110,7 +111,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Our Story */}
       <section className="py-16">

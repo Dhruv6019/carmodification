@@ -15,6 +15,7 @@ import {
   Calendar,
   Quote
 } from "lucide-react";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const Contact = () => {
   const contactInfo = [
@@ -67,7 +68,7 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-muted to-background">
+      <AnimatedSection className="pt-24 pb-16 bg-gradient-to-b from-muted to-background mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
             Get In <span className="text-gradient">Touch</span>
@@ -87,14 +88,14 @@ const Contact = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Contact Info Cards */}
-      <section className="py-16">
+      <AnimatedSection className="py-16" animation="scaleIn">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center hover-lift hover-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
                   <info.icon className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
@@ -107,7 +108,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Main Contact Section */}
       <section className="py-16 bg-muted">

@@ -76,7 +76,9 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-glass': 'var(--gradient-glass)',
-				'gradient-hero-overlay': 'var(--gradient-hero-overlay)'
+				'gradient-hero-overlay': 'var(--gradient-hero-overlay)',
+				'gradient-electric': 'var(--gradient-electric)',
+				'gradient-mesh': 'var(--gradient-mesh)'
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',

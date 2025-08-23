@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Eye, Heart, Share2, Filter } from "lucide-react";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -89,16 +90,16 @@ const Gallery = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-b from-muted to-background">
+      <AnimatedSection className="pt-24 pb-12 bg-gradient-to-b from-muted to-background mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 hover-lift">
             Modification <span className="text-gradient">Gallery</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
             Explore our portfolio of stunning car transformations and get inspired for your next project.
           </p>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Filter Tabs */}
       <section className="py-8 border-b border-border">
@@ -120,11 +121,11 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16">
+      <AnimatedSection className="py-16" animation="scaleIn">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <Card key={project.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+            {filteredProjects.map((project, index) => (
+              <Card key={project.id} className="group hover:shadow-xl hover-lift transition-all duration-500 overflow-hidden animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="relative">
                   <img 
                     src={project.image} 
@@ -177,7 +178,7 @@ const Gallery = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* CTA Section */}
       <section className="py-16 bg-muted">
