@@ -1,4 +1,4 @@
-import { VideoHero } from "@/components/VideoHero";
+import { Hero3D } from "@/components/Hero3D";
 import { FeatureCards } from "@/components/FeatureCards";
 import { LivePreviewTeaser } from "@/components/LivePreviewTeaser";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <VideoHero />
+      <Hero3D />
       <AnimatedSection animation="fadeInUp">
         <FeatureCards />
       </AnimatedSection>
