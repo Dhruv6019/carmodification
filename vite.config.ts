@@ -30,14 +30,6 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
-    // Enable tree shaking
     target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-        drop_debugger: mode === 'production',
-      },
-    },
   },
 }));
